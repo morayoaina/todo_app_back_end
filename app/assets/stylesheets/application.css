@@ -33,6 +33,11 @@ h2 {
     margin: 20px 0px;
 }
 
+/* how to add background photo to css */
+/*body{*/
+/*    background-image: url(liam-pozz-325640.jpg);*/
+/*}*/
+
 .pomodoro-estimate{
     font-weight: bold;
     color: #f44336;
