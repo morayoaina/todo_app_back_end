@@ -9,7 +9,7 @@ class TodoController < ApplicationController
             @todo_pomodoro_estimate = 4 
             
         elsif todo_id == '2'
-         @todo_description = "Buy workshp supplies"
+         @todo_description = "Buy workshop supplies"
         @todo_pomodoro_estimate = 3
         
         end
