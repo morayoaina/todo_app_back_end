@@ -1,40 +1,15 @@
 <h1>ToDo List</h1>
     <ul>
-        <li>
-          <input type="checkbox" name=""/>
-          <a href="show/1">IRW essay</a>
-        <span class="pomodoro-estimate"></span><%= 100+3 %>pomodoro</span>
-        </li>
-        <li>
-          <input type="checkbox" name=""/>
-         <a href="show/2">College visit week</a>
-          <span class="pomodoro-estimate">4 pomodoro</span>
-          </li>
-        <li>
-          <input type="checkbox" name=""/>
-          <a href="show/3">Mathematics home work</a>
-          <span class="pomodoro-estimate">1 pomodoro</span>
-          </li>
-        <li>
-          <input type="checkbox" name=""/>
-          <a href="show/4">life science home work</a>
-          <span class="pomodoro-estimate">1 pomodoro</span>
-          </li>
-        <li>
-          <input type="checkbox" name=""/>
-          <a href="show/5">sleep</a>
-      <span class="pomodoro-estimate">2 pomodoro</span>
-       </li>
-        <li>
-          <input type="checkbox" name=""/>
-         <a href="show/6">eat</a>
-      <span class="pomodoro-estimate">4 pomodoro</span>
-      </li>
-   </ul>
-   <div>
-      <input type="text" placeholder="Add a new todo"/>
-      <input type="number" placeholder="Pomodoro estimate"/>
-      <input id="add-new-todo-button" type="submit" value="Add todo"/>
-       
-       
-   </div>
+    <% @todos.each do |todo| %>
+        
+    <li>
+      <input type="checkbox" name=""/>
+      <a href="show/<%= todo.id%>"><%= todo.description %></a>
+        <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+    </li>
+<% end %>
+ </ul>
+ 
+<div id="new-todo-block">
+    <a href="/todo/new" class="button add-new-todo-button" id="add-new-todo-button">Add a todo</a>
+</div>
