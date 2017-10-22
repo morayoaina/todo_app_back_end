@@ -1,11 +1,10 @@
-
-     <h2>
-          <input type="checkbox">
-         <h2><%= @todo.description %></h2>
-         <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo.pomodoro_estimate %> pomodoros</span>
-    </h2>
+<div>
+    <input type="checkbox">
+    <h2><%= @todo.description %></h2>
+    <span class="pomodoro-estimate"><%= @todo.pomodoro_estimate %> pomodoros</span>
+    
     <h3>Todo #<%= params[:id] %></h3>
-    <a href=''#''>Edit</a>
-    <a <href=''#''Delete</a>
+    <a href='/todo/edit/<%= @todo.id %>' class="button edit-todo-button">Edit</a>
+    <a href="/todo/destroy/<%= @todo.id %>" class="button" id="delete-todo-button">Delete</a>
     <a href="index.html">Go back</a>
-    </head>
+</div>
